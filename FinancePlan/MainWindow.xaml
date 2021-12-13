@@ -1,0 +1,25 @@
+﻿<Window x:Class="FinancePlan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinancePlan"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Вход" Height="500" Width="800">
+    <Grid>
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <StackPanel>
+                <TextBlock Text="Добро пожаловать" FontSize=" 30 " FontWeight="Bold" Margin="0 0 0 20"/>
+
+                <Grid Margin=" 0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Регистрация" Background="#FF21CB79" BorderBrush="#FF21CB79" />
+                    <Button HorizontalAlignment="Right" Content="Вход" Click="Button_Authorization_Window_Click" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FF21CB79" />
+                </Grid>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF21CB79" SelectionBrush="#FFCAE4BA" />
+                <PasswordBox x:Name="textBoxPassword" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" CaretBrush="#FF21CB79" SelectionBrush="#FFCAE4BA" />
+                <Button Content="Зарегистрироваться" Margin="0 20" Background="#FF21CB79" BorderBrush="#FF21CB79" Click="Button_Registr_Click" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
