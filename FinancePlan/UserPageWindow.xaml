@@ -7,14 +7,30 @@
         mc:Ignorable="d"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="AuthorizationWindow" Height="450" Width="700">
-    <Grid>
-        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
-            <StackPanel>
-                <TextBlock Text="Личный кабинет" FontSize=" 30 " FontWeight="Bold" Margin="0 0 0 20"/>
 
-                
-                
-            </StackPanel>
-        </Border>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="0" Margin="0,0,-0.4,50" Grid.RowSpan="2">
+            <TabItem Name="Cards" RenderTransformOrigin="-1.405,2.417">
+                <TabItem.Header>
+                    <TextBlock Text="Cards"/>
+                </TabItem.Header>
+            <Button Content="Button" HorizontalAlignment="Left" Height="50" Margin="82,121,0,0" VerticalAlignment="Top" Width="46"/>
+            </TabItem>
+            <TabItem Name="Transactions" RenderTransformOrigin="-1.405,2.417">
+                <TabItem.Header>
+                    <TextBlock Text="Transactions"/>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem Name="Contributions" RenderTransformOrigin="-1.405,2.417">
+                <TabItem.Header>
+                    <TextBlock Text="Contributions"/>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+        
     </Grid>
 </Window>
