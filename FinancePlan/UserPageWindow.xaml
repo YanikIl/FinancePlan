@@ -18,7 +18,8 @@
                 <TabItem.Header>
                     <TextBlock Text="Cards"/>
                 </TabItem.Header>
-            <Button Content="Button" HorizontalAlignment="Left" Height="50" Margin="82,121,0,0" VerticalAlignment="Top" Width="46"/>
+                <Button Content="Добавить карту" HorizontalAlignment="Left" Height="32" Margin="51,9,0,0" VerticalAlignment="Top" Width="173" Background="#FF21CB79" BorderBrush="#FF21CB79"/>
+
             </TabItem>
             <TabItem Name="Transactions" RenderTransformOrigin="-1.405,2.417">
                 <TabItem.Header>
@@ -31,6 +32,6 @@
                 </TabItem.Header>
             </TabItem>
         </TabControl>
-        
+
     </Grid>
 </Window>
