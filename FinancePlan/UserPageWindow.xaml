@@ -13,13 +13,37 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
+
         <TabControl Grid.Row="0" Margin="0,0,-0.4,50" Grid.RowSpan="2">
-            <TabItem Name="Cards" RenderTransformOrigin="-1.405,2.417">
+
+            <TabItem Name="Cards" RenderTransformOrigin="-1.405,2.417" Height="23" Margin="-2,-2,-2.4,-0.2" VerticalAlignment="Top">
                 <TabItem.Header>
+
                     <TextBlock Text="Cards"/>
                 </TabItem.Header>
-                <Button Content="Добавить карту" HorizontalAlignment="Left" Height="32" Margin="51,9,0,0" VerticalAlignment="Top" Width="173" Background="#FF21CB79" BorderBrush="#FF21CB79"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="155*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonAdd" Content="Добавить карту" HorizontalAlignment="Left" Height="32" Margin="375,21,0,0" VerticalAlignment="Top" Width="207" Background="#FF21CB79" BorderBrush="#FF21CB79" Click="ButtonAdd_Click" Grid.Column="1"/>
+                    <Label x:Name="Name" Content="Имя карты" Margin="0,21,479,287" Grid.Column="1"/>
 
+                    <ListView x:Name="ListView" Grid.Column="1" HorizontalAlignment="Left" Height="82" Margin="0,133,0,0" VerticalAlignment="Top" Width="582" SelectionChanged="ListView_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="200">Имя карты</GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Balance}" Width="200">Баланс</GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <TextBox x:Name="txtName" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="91,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" TextChanged="TextBox_TextChanged"/>
+                    <Label x:Name="Balance" Content="Баланс" Grid.Column="1" HorizontalAlignment="Left" Margin="0,53,0,0" VerticalAlignment="Top" Width="56"/>
+                    <TextBox x:Name="txtBalance" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="91,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77"/>
+                    <Button x:Name="ButtonRemove" Content="Удалить карту" Grid.Column="1" HorizontalAlignment="Left" Margin="375,65,0,0" VerticalAlignment="Top" Width="207" Background="#FF21CB79" BorderBrush="#FF21CB79" Click="ButtonRemove_Click"/>
+                    <Button x:Name="ButtonOpen" Content="Открыть" HorizontalAlignment="Left" VerticalAlignment="Top" Width="207" Background="#FF21CB79" BorderBrush="#FF21CB79" Height="29" Margin="375,311,0,0" Grid.Column="1"/>
+
+                </Grid>
             </TabItem>
             <TabItem Name="Transactions" RenderTransformOrigin="-1.405,2.417">
                 <TabItem.Header>
@@ -31,6 +55,7 @@
                     <TextBlock Text="Contributions"/>
                 </TabItem.Header>
             </TabItem>
+            <Label x:Name="Name_Copy" Content="Имя карты" Height="32" Width="141"/>
         </TabControl>
 
     </Grid>

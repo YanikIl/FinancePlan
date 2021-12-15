@@ -1,0 +1,17 @@
+﻿<Window x:Class="FinancePlan.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinancePlan"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="328.24">
+    <Grid Margin="0,0,38.2,0">
+        <Label Content="Название карты" HorizontalAlignment="Left" Height="29" Margin="83,51,0,0" VerticalAlignment="Top" Width="143" FontSize="14"/>
+        <Label Content="Баланс" HorizontalAlignment="Left" Margin="83,211,0,0" VerticalAlignment="Top" Height="29" Width="91" FontSize="14"/>
+        <TextBox x:Name="NameCard" HorizontalAlignment="Left" Height="34" Margin="83,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" FontSize="14"/>
+        <TextBox x:Name="Balance" HorizontalAlignment="Left" Height="30" Margin="83,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" BorderBrush="#89000000" CaretBrush="White" Foreground="#FF111010" SelectionBrush="#FF5A5A5A" Background="#00000000" FontSize="14"/>
+        <Button x:Name="Button_Card" Content="Добавить карту" HorizontalAlignment="Left" Height="35" Margin="83,355,0,0" VerticalAlignment="Top" Width="164"/>
+
+    </Grid>
+</Window>

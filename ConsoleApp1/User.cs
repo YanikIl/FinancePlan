@@ -9,13 +9,13 @@ namespace ConsoleApp1
     class User
     {
         public List<Card> Cards = new();
-        public string Name;
         public string Login;
+        public string PassWord;
 
-        public User(string name, string login)
+        public User(string login, string password)
         {
-            Name = name;
             Login = login;
+            PassWord = password;
         }
 
     }
